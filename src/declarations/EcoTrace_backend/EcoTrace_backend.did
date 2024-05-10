@@ -1,3 +1,23 @@
+type DatosCabeza = 
+ record {
+   ascendencia: text;
+   destino: text;
+   dieta: text;
+   fechaNacimiento: text;
+   mejoramientoGenetico: text;
+   propietario: text;
+   raza: text;
+   registroEnfermedades: text;
+ };
+type Arete = text;
 service : {
-  greet: (text) -> (text) query;
+  consultCabeza: (Arete) -> (opt DatosCabeza) query;
+  consultGanado: () -> (vec record {
+                              text;
+                              DatosCabeza;
+                            }) query;
+  deleteCabeza: (Arete) -> (text);
+  saveCabeza: (DatosCabeza, Arete) -> (DatosCabeza);
+  updateDatosGanado: (Arete, DatosCabeza) -> (text);
+  whoami: () -> (principal) query;
 }
