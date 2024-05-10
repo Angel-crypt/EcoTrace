@@ -1,4 +1,4 @@
-type Identificador = text;
+type Identificador = nat;
 type Evento = 
  record {
    categoria: text;
@@ -9,7 +9,7 @@ type Evento =
 service : {
   consultEvento: (Identificador) -> (opt Evento) query;
   consultEventos: () -> (vec record {
-                               text;
+                               nat;
                                Evento;
                              }) query;
   saveEvento: (Evento, Identificador) -> (Evento);

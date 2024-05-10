@@ -12,7 +12,7 @@ export type Identificador = bigint;
 export interface _SERVICE {
   'consultEvento' : ActorMethod<[Identificador], [] | [Evento]>,
   'consultEventos' : ActorMethod<[], Array<[bigint, Evento]>>,
-  'saveEvento' : ActorMethod<[Evento, Identificador], Evento>,
+  'saveEvent' : ActorMethod<[Evento, Identificador], Evento>,
   'whoami' : ActorMethod<[], Principal>,
 }
 export declare const idlFactory: IDL.InterfaceFactory;

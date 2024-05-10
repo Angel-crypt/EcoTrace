@@ -29,16 +29,20 @@ actor oidoSelva {
     // Inicializar el arreglo
     var evento = HashMap.HashMap<User, Eventos>(0, Principal.equal, Principal.hash);
     // Funciones
+    var id : Nat = 1;
+
     // Función para obtener el usuario que realiza la llamada
     public query ({ caller }) func whoami() : async Principal {
         return caller;
     };
 
     // Funcion para agregar
-    public shared (msg) func saveEvento(datosEvento : Evento, identificador : Identificador) : async Evento {
+    public shared (msg) func saveEvent(datosEvento : Evento, identificador : Identificador) : async Evento {
         let user : Principal = msg.caller;
         let id : Nat = identificador;
         let resultEvento = evento.get(user);
+
+        
 
         var finalEvento : Eventos = switch resultEvento {
             case (null) {

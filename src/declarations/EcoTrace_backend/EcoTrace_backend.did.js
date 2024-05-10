@@ -13,7 +13,7 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Vec(IDL.Tuple(IDL.Nat, Evento))],
         ['query'],
       ),
-    'saveEvento' : IDL.Func([Evento, Identificador], [Evento], []),
+    'saveEvent' : IDL.Func([Evento, Identificador], [Evento], []),
     'whoami' : IDL.Func([], [IDL.Principal], ['query']),
   });
 };

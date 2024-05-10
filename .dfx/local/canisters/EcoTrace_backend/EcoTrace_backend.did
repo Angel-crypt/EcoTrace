@@ -12,6 +12,6 @@ service : {
                                nat;
                                Evento;
                              }) query;
-  saveEvento: (Evento, Identificador) -> (Evento);
+  saveEvent: (Evento, Identificador) -> (Evento);
   whoami: () -> (principal) query;
 }
