@@ -1,25 +1,19 @@
 export const idlFactory = ({ IDL }) => {
-  const Arete = IDL.Text;
-  const DatosCabeza = IDL.Record({
-    'destino' : IDL.Text,
-    'mejoramientoGenetico' : IDL.Text,
-    'raza' : IDL.Text,
-    'ascendencia' : IDL.Text,
-    'fechaNacimiento' : IDL.Text,
-    'dieta' : IDL.Text,
-    'registroEnfermedades' : IDL.Text,
-    'propietario' : IDL.Text,
+  const Identificador = IDL.Nat;
+  const Evento = IDL.Record({
+    'ubicacion' : IDL.Text,
+    'categoria' : IDL.Text,
+    'hora' : IDL.Text,
+    'fecha' : IDL.Text,
   });
   return IDL.Service({
-    'consultCabeza' : IDL.Func([Arete], [IDL.Opt(DatosCabeza)], ['query']),
-    'consultGanado' : IDL.Func(
+    'consultEvento' : IDL.Func([Identificador], [IDL.Opt(Evento)], ['query']),
+    'consultEventos' : IDL.Func(
         [],
-        [IDL.Vec(IDL.Tuple(IDL.Text, DatosCabeza))],
+        [IDL.Vec(IDL.Tuple(IDL.Nat, Evento))],
         ['query'],
       ),
-    'deleteCabeza' : IDL.Func([Arete], [IDL.Text], []),
-    'saveCabeza' : IDL.Func([DatosCabeza, Arete], [DatosCabeza], []),
-    'updateDatosGanado' : IDL.Func([Arete, DatosCabeza], [IDL.Text], []),
+    'saveEvento' : IDL.Func([Evento, Identificador], [Evento], []),
     'whoami' : IDL.Func([], [IDL.Principal], ['query']),
   });
 };

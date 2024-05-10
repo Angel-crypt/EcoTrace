@@ -1,3 +1,17 @@
+type Identificador = text;
+type Evento = 
+ record {
+   categoria: text;
+   fecha: text;
+   hora: text;
+   ubicacion: text;
+ };
 service : {
-  greet: (text) -> (text) query;
+  consultEvento: (Identificador) -> (opt Evento) query;
+  consultEventos: () -> (vec record {
+                               text;
+                               Evento;
+                             }) query;
+  saveEvento: (Evento, Identificador) -> (Evento);
+  whoami: () -> (principal) query;
 }
