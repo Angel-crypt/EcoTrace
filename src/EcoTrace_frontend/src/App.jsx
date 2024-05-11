@@ -14,17 +14,29 @@ function App() {
   }
 
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <div className="App">
+      <div id="back">
+        <img id="background" src='landing_page_v7.jpg' alt='background_image'></img>
+      <header className="header">
+        <div className="containerHeader">
+          <a className="button" href='http://be2us-64aaa-aaaaa-qaabq-cai.localhost:4943/'>
+          <h3>Conect</h3>
+          </a>
+          
+        </div>
+      </header>
+      <main className="main-content">
+        <div className="containerCon">
+          <h3>Escuchando a la Selva</h3> 
+          <h1 >ECOTRACE</h1>
+          <h2>Plataforma de registro de incendios</h2>
+          <img className="icplogo" id="icp_image" src='logo2.svg' alt='icp_image'></img>
+        </div>
+      </main>
+      </div>
+    </div>
+
+                                                                                                                                                                                                                                                             
   );
 }
 

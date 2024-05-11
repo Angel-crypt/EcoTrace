@@ -1,0 +1,36 @@
+
+h1, h2,h3, p {
+    color: #fff ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    font-size: medium;
+
+}
+h2{
+    font-size: small;
+}
+p {
+    font-size: 16px;
+}
+
+
+.Section {
+    width: 100%;
+    padding:  20%;
+}
+.Noticias {
+    display: flex;
+    justify-content: center;
+
+}
+.Cards {
+    background: rgba( 65, 117, 5, 0.55 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+width: 20%;   
+margin: 26px;
+}
+
