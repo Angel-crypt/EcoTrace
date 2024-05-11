@@ -27,8 +27,8 @@ function App() {
       </header>
       <main className="main-content">
         <div className="containerCon">
-          <h3>Escuchando a la Selva</h3>
-          <h1 >ECO <h1>TRACE</h1></h1>
+          <h3>Escuchando a la Selva</h3> 
+          <h1 >ECOTRACE</h1>
           <h2>Plataforma de registro de incendios</h2>
           <img className="icplogo" id="icp_image" src='logo2.svg' alt='icp_image'></img>
         </div>
